@@ -26,29 +26,6 @@ tags:
 servers:
   - url: 'http://example.com/api/v1'
   - url: 'https://example.com/api/v1'
-    /api/v1.0/artifact/auditByLevel:
-    post:
-      tags:
-      - artifact-controller
-      operationId: getArtifactHistoryByLevel
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ArtifactAuditByLevelRequest'
-      responses:
-        400:
-          description: default response
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ApiErrorVO'
-        200:
-          description: default response
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ArtifactDeltaResponse'
 paths:
   '/users/{username}':
     $ref: 'paths/users@{username}.yaml'
